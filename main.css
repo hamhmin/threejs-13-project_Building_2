@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Noto sans kr', sans-serif;
+	padding: 0;
+	color: #333;
+	height: 2000px; /**/
+}
+#three-canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+	/* z-index: 5; */
+	z-index: -1;
+}
+#SNAP_WRAP{
+	/* body{ */
+	position: relative;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
+	scroll-snap-type: y mandatory;
+}
+.snap_section{
+	position: relative;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	scroll-snap-align: start;
+	/* scroll-snap-stop: normal; */
+	/* scroll-margin: 10px; */
+
+	box-sizing: border-box;
+	padding: 5rem;
+	font-size: 2rem;
+	text-shadow: 4px 4px 10px gray;
+	border:1px solid purple;
+}
+.snap_section {
+
+	justify-content: center;
+	align-items: center;
+  }
+  
+  
+
+.title_h1{
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	color: white;
+	font-size: 20px;
+}
+
+#LIGHT_BTN_WRAP{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 9999;
+}
+#LIGHT_BTN_WRAP button{
+	border:0;
+	padding: 8px 16px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+#LIGHT_BTN_WRAP #BACK{
+	color: purple;
+	background: #fff;
+	border: 1px solid purple;
+	transition-duration: 0.3s;
+}
+#LIGHT_BTN_WRAP #LIGHT_MODE{
+	background: #fff;
+	border: 1px solid #333;
+}
+#LIGHT_BTN_WRAP #DARK_MODE{
+	background: #333;
+	color: #fff;
+	border: 1px solid #fff;
+}
+#LIGHT_BTN_WRAP #CONTROLLER{
+	background: #fff;
+	color: cornflowerblue;
+	border: 1px solid #333;
+	animation-name: control_moving;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	position: fixed;
+	bottom: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-timing-function:ease-out;
+	/* display: none; */
+}
+#LIGHT_BTN_WRAP #CONTROLLER::before{
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40px;
+	height: 6px;
+	border: 1px solid;
+	border-radius: 3px;
+	background-color: rgba(255,255,255,0.1);
+}
+#LIGHT_BTN_WRAP #CONTROLLER::after{
+	content: "";
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 4px;
+	border: 1px solid;
+	border-radius: 2px;
+	background-color: rgba(255,255,255,0.1);
+
+}
+#LIGHT_BTN_WRAP #CONTROLLER:hover{
+	animation-play-state: paused;
+}
+#LIGHT_BTN_WRAP #CONTROLLER.on{
+	animation-name: stop;
+}
+@keyframes stop {
+ to{
+	bottom: 10vh;
+ }
+}
+@keyframes control_moving {
+	0%{
+		background-color: #aaa;
+		/* bottom: 10vh; */
+	}
+	100%{
+		background-color: #fff;
+		bottom:15vh;
+
+	}
+
+}
+.move_btn_center{
+	position: fixed;
+	width: 24px;
+	height: 24px;
+	z-index: 30;
+	border-radius: 9999px;
+	top: 50%;
+	left: 50%;
+	border: 1px solid #333;
+	/* display: none; */
+	/* opacity: 0; */
+	font-size: 15px;
+	color: #333;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+.move_btn_center:hover{
+	transform: scale(1.2);
+	background: #fff;
+	color: #333;
+}
+.move_btn_center:active{
+	background: purple;
+}
+
+
+.side_btn_area{
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	z-index: 9999;
+}
+.side_btn_area .move_btn_side{
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 9999px;
+	border: 1px solid #333;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+.move_btn_side:hover{
+	transform: scale(1.2);
+	background: #ffffff;
+	color: #333;
+}
+.move_btn_side:active{
+	background: purple;
+}
+.move_btn{
+	opacity: 0;
+}
+body::-webkit-scrollbar{display: none;}
+#SNAP_WRAP::-webkit-scrollbar{display: none;}
+/* body::-webkit-scrollbar-thumb{width: 4px;} */
+/* body::-webkit-scrollbar-track{width: 40px;} */
+
+
+  
+.test{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	/* opacity: 1; */
+	transition-duration: .3s;
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
