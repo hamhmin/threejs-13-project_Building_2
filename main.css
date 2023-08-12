@@ -106,7 +106,7 @@ body {
 	height: 6px;
 	border: 1px solid;
 	border-radius: 3px;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0.5);
 }
 #LIGHT_BTN_WRAP #CONTROLLER::after{
 	content: "";
@@ -118,7 +118,7 @@ body {
 	height: 4px;
 	border: 1px solid;
 	border-radius: 2px;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0.5);
 
 }
 #LIGHT_BTN_WRAP #CONTROLLER:hover{
@@ -208,7 +208,7 @@ body::-webkit-scrollbar{display: none;}
 
 
   
-.test{
+.controls_area{
 	position: fixed;
 	top: 0;
 	left: 0;
