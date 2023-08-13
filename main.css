@@ -126,10 +126,13 @@ body {
 }
 #LIGHT_BTN_WRAP #CONTROLLER.on{
 	animation-name: stop;
+	bottom: calc(15vh - 65px);
 }
 @keyframes stop {
  to{
-	bottom: 10vh;
+	/* bottom: calc(10vh - 200px); */
+	/* bottom: calc(15vh - 65px); */
+
  }
 }
 @keyframes control_moving {
@@ -139,7 +142,9 @@ body {
 	}
 	100%{
 		background-color: #fff;
-		bottom:15vh;
+		/* bottom:15vh; */
+		bottom: calc(15vh - 65px);
+
 
 	}
 
