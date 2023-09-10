@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Serif+KR:wght@200;300;400;500&display=swap');
 body {
 	margin: 0;
-	font-family: 'Noto sans kr', sans-serif;
+	/* font-family: 'Noto sans kr', sans-serif; */
+	font-family: 'Noto Serif KR', serif;
 	padding: 0;
 	color: #333;
 	height: 2000px; /**/
+	background-color: #f8e7ff;
 }
 #three-canvas {
 	position: fixed;
@@ -26,23 +28,20 @@ body {
 .snap_section{
 	position: relative;
 	display: flex;
+	justify-content: end;
 	width: 100vw;
 	height: 100vh;
 	scroll-snap-align: start;
 	/* scroll-snap-stop: normal; */
 	/* scroll-margin: 10px; */
-
-	box-sizing: border-box;
-	padding: 5rem;
-	font-size: 2rem;
-	text-shadow: 4px 4px 10px gray;
-	border:1px solid purple;
-}
-.snap_section {
-
-	justify-content: center;
+	justify-content: end;
 	align-items: center;
-  }
+	box-sizing: border-box;
+	/* padding: 5rem; */
+	font-size: 2rem;
+	/* text-shadow: 4px 4px 10px gray; */
+	/* border:1px solid purple; */
+}
   
   
 
@@ -65,6 +64,7 @@ body {
 	padding: 8px 16px;
 	cursor: pointer;
 	border-radius: 8px;
+	font-family: 'Noto Serif KR', serif;
 }
 #LIGHT_BTN_WRAP #BACK{
 	color: purple;
@@ -153,7 +153,7 @@ body {
 	position: fixed;
 	width: 24px;
 	height: 24px;
-	z-index: 30;
+	z-index: 2;
 	border-radius: 9999px;
 	top: 50%;
 	left: 50%;
@@ -164,6 +164,7 @@ body {
 	color: #333;
 	cursor: pointer;
 	transition-duration: 0.3s;
+	text-align: center;
 }
 .move_btn_center:hover{
 	transform: scale(1.2);
@@ -205,6 +206,7 @@ body {
 }
 .move_btn{
 	opacity: 0;
+	/* pointer-events: none; */
 }
 body::-webkit-scrollbar{display: none;}
 #SNAP_WRAP::-webkit-scrollbar{display: none;}
@@ -228,4 +230,39 @@ body::-webkit-scrollbar{display: none;}
 	justify-content: center;
 	align-items: center;
 }
+.controls_title{
+	position: relative;
+	z-index: 9999;
+}
+.loading_area{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	/* height: ; */
+	background: rgba(164,0,255,0.5);
+}
 
+.sc_article{
+	width: 50vw;
+	height: 100vh;
+	background-color: #f8e7ff;
+	color: #8e00b9;
+	position: relative;
+	z-index: 3;
+	font-size: 24px;
+	box-shadow: 0px -15px 15px -20px #2e0032 inset;
+}
+.article_box{
+	padding: 30px 100px;
+	height: calc(100vh - 60px);
+}
+.article_box h1{
+	text-align: center;
+}
+.article_box p {
+	font-size: 14px;
+	height: calc(100vh - 200px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
