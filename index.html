@@ -1,1 +1,319 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>building</title><link rel="stylesheet" href="./main.css"><script defer="defer" src="917.min.js"></script><script defer="defer" src="main.min.js"></script></head><body id="BODY" class=""><div id="FIRST_PAGE" class="first_page"><p id="FIRST_PAGE_TEXT">start! start!<br>start! start!<br>start! start!<br>start! start!<br>start! start!<br></p></div><div id="LAYER_1"></div><main id="SNAP_WRAP" class=""><section id="" class="snap_section snap_1"><article class="sc_article sc_article1"><div class="article_box"><h1>Why do we use it?</h1><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p></div></article></section><section id="" class="snap_section snap_2"><article class="sc_article sc_article2"><div class="article_box"><h1>Where does it come from?</h1><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum".</p></div></article></section><section id="" class="snap_section snap_7"><div class="move_btn_center move_btn" style="pointer-events:none;" status="1">1</div><div class="move_btn_center move_btn" style="pointer-events:none;" status="2">2</div><div class="move_btn_center move_btn" style="pointer-events:none;" status="3">3</div><div class="move_btn_center move_btn" style="pointer-events:none;" status="4">4</div><div class="move_btn_center move_btn" style="pointer-events:none;" status="5">5</div><div class="move_btn_center move_btn" style="pointer-events:none;" status="6">6</div><h1 class="side_btn_area"><div class="move_btn_side move_btn" style="pointer-events:none;" status="1">1</div><div class="move_btn_side move_btn" style="pointer-events:none;" status="2">2</div><div class="move_btn_side move_btn" style="pointer-events:none;" status="3">3</div><div class="move_btn_side move_btn" style="pointer-events:none;" status="4">4</div><div class="move_btn_side move_btn" style="pointer-events:none;" status="5">5</div><div class="move_btn_side move_btn" style="pointer-events:none;" status="6">6</div></h1><article class="sc_article sc_article3"><div class="article_box"><h1>Where can I get some?</h1><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p></div></article></section></main><div class="controls_area"><div class="controls_title">Let's Page Scrolling</div><div class="loading_area" id="LOADING"></div></div><canvas id="three-canvas"></canvas><div id="LIGHT_BTN_WRAP"><button id="LIGHT_MODE">light</button> <button id="DARK_MODE">dark</button> <button id="BACK">back</button> <button id="CONTROLLER">controller</button></div><script type="text/javascript"></script></body></html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Building — 3D Showcase</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script defer src="917.min.js"></script>
+    <script defer src="main.min.js"></script>
+  </head>
+
+  <body id="BODY">
+    <!-- ① 진입 화면 -->
+    <div id="FIRST_PAGE" class="first_page">
+      <p id="FIRST_PAGE_TEXT">
+        <span class="fp-sub">3D Building Showcase</span>
+        <span class="fp-title">EXPLORE<br />THE SPACE</span>
+        <span class="fp-hint">drag to enter ↑</span>
+      </p>
+    </div>
+    <div id="LAYER_1"></div>
+
+    <!-- ② 스냅 스크롤 섹션 -->
+    <main id="SNAP_WRAP">
+      <!-- 섹션 1 -->
+      <section class="snap_section snap_1">
+        <article class="sc_article sc_article1">
+          <div class="article_box">
+            <span class="article_num">01</span>
+            <h2>로비 & 메인 출입구</h2>
+            <p>
+              건물의 첫인상을 결정하는 공간입니다. 넓은 유리 파사드와 개방형
+              로비 구조로 자연광을 최대한 확보하였으며, 방문객이 편안하게 진입할
+              수 있도록 동선을 설계했습니다.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 섹션 2 -->
+      <section class="snap_section snap_2">
+        <article class="sc_article sc_article2">
+          <div class="article_box">
+            <span class="article_num">02</span>
+            <h2>저층부 — 상업 공간</h2>
+            <p>
+              1~3층은 다양한 상업 시설이 입점 가능한 유연한 공간으로 구성됩니다.
+              가변형 파티션 시스템을 통해 소규모 매장부터 대형 전시 공간까지
+              자유롭게 구성할 수 있습니다.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 섹션 3 -->
+      <section class="snap_section snap_3">
+        <article class="sc_article sc_article3">
+          <div class="article_box">
+            <span class="article_num">03</span>
+            <h2>중층부 — 오피스 층</h2>
+            <p>
+              4~8층은 업무 효율을 극대화한 오피스 공간입니다. 층별 독립 구획과
+              공용 회의실을 갖추고 있으며, 고속 엘리베이터와 비상계단으로 수직
+              동선을 확보했습니다.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 섹션 4 — v값 보정용 (main.min.js: v = length-2, 마지막 섹션 직전이어야 함) -->
+      <section class="snap_section snap_4">
+        <article class="sc_article sc_article4">
+          <div class="article_box">
+            <span class="article_num">04</span>
+            <h2>옥상 & 외관</h2>
+            <p>
+              완만한 곡선형 지붕 구조가 건물 전체의 실루엣을 완성합니다. 옥상
+              공간은 녹지 공간과 야외 휴게 공간으로 활용되며, 유리 커튼월 외벽은
+              계절과 시간에 따라 다양한 빛을 반사합니다.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 섹션 4 — 번호 클릭 안내 -->
+      <section class="snap_section snap_7">
+        <!-- 빌딩 위 번호 오버레이 버튼 -->
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="1"
+        >
+          1
+        </div>
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="2"
+        >
+          2
+        </div>
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="3"
+        >
+          3
+        </div>
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="4"
+        >
+          4
+        </div>
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="5"
+        >
+          5
+        </div>
+        <div
+          class="move_btn_center move_btn"
+          style="pointer-events: none"
+          status="6"
+        >
+          6
+        </div>
+
+        <!-- 사이드 번호 버튼 -->
+        <div class="side_btn_area">
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="1"
+          >
+            1
+          </div>
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="2"
+          >
+            2
+          </div>
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="3"
+          >
+            3
+          </div>
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="4"
+          >
+            4
+          </div>
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="5"
+          >
+            5
+          </div>
+          <div
+            class="move_btn_side move_btn"
+            style="pointer-events: none"
+            status="6"
+          >
+            6
+          </div>
+        </div>
+
+        <article class="sc_article sc_article_nav">
+          <div class="article_box">
+            <span class="article_num">NAVIGATE</span>
+            <h2>원하는 공간으로<br />직접 이동해보세요</h2>
+            <p class="nav_desc">
+              빌딩 위에 표시된 번호를 클릭하면<br />해당 위치로 카메라가
+              이동합니다.
+            </p>
+            <div class="nav_num_preview">
+              <span>1</span><span>2</span><span>3</span> <span>4</span
+              ><span>5</span><span>6</span>
+            </div>
+            <p class="nav_hint">← 빌딩 위 번호를 클릭해보세요</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- 컨트롤 섹션 — body scroll 시 표시, controller 버튼 안내 -->
+    <div class="controls_area">
+      <div class="loading_area" id="LOADING"></div>
+      <div class="ctrl_content">
+        <p class="ctrl_eyebrow">Free Camera Mode</p>
+        <h2 class="ctrl_title">마우스로 건물을<br />자유롭게 둘러보세요</h2>
+        <p class="ctrl_desc">
+          아래 Controller 버튼을 눌러<br />마우스로 시점을 자유롭게 조작할 수
+          있습니다
+        </p>
+        <div class="ctrl_scroll_hint">↓</div>
+      </div>
+    </div>
+
+    <!-- Three.js 캔버스 -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- 모바일 전용: 캔버스 오른쪽 빈 공간 채우기 -->
+    <div id="mobile-bg"></div>
+
+    <!-- UI 버튼 그룹 (light / dark / back) -->
+    <div id="LIGHT_BTN_WRAP">
+      <div id="UI_GROUP">
+        <button id="LIGHT_MODE" title="라이트 모드">☀</button>
+        <button id="DARK_MODE" title="다크 모드">☾</button>
+        <div class="btn_divider"></div>
+        <button id="BACK" title="처음으로">↩</button>
+      </div>
+    </div>
+
+    <!-- CONTROLLER: main.min.js가 position:fixed bottom:10vh에서 bounce 애니로 제어 -->
+    <div id="LIGHT_BTN_WRAP_CTRL">
+      <button id="CONTROLLER" title="3D 자유 카메라">controller</button>
+    </div>
+
+    <script type="text/javascript">
+      // 새로고침 시 스크롤 초기화
+      if (history.scrollRestoration) history.scrollRestoration = "manual";
+      window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
+        var snap = document.getElementById("SNAP_WRAP");
+        if (snap) snap.scrollTop = 0;
+      });
+
+      // 모바일 canvas 우회 코드 불필요 — main.min.js에서 직접 처리됨
+
+      // body scroll 시 SNAP_WRAP 숨기기 / 복원
+      document.addEventListener("scroll", function () {
+        var snap = document.getElementById("SNAP_WRAP");
+        if (!snap) return;
+        if (scrollY > 0) {
+          snap.style.opacity = "0";
+          snap.style.pointerEvents = "none";
+        } else {
+          snap.style.opacity = "1";
+          snap.style.pointerEvents = "";
+        }
+      });
+
+      // DARK/LIGHT 버튼 클릭 시 move_btn_side 인라인 스타일 강제 재지정
+      // main.min.js가 style.color="#fff" 등을 직접 주입하므로 CSS만으론 못 이김
+      function applyBtnSideStyle(isDark) {
+        document.querySelectorAll(".move_btn_side").forEach(function (btn) {
+          if (isDark) {
+            btn.style.setProperty(
+              "background",
+              "rgba(255,255,255,0.85)",
+              "important",
+            );
+            btn.style.setProperty("color", "#111", "important");
+            btn.style.setProperty(
+              "border-color",
+              "rgba(255,255,255,0.9)",
+              "important",
+            );
+          } else {
+            btn.style.setProperty(
+              "background",
+              "rgba(255,255,255,0.75)",
+              "important",
+            );
+            btn.style.setProperty("color", "var(--accent)", "important");
+            btn.style.setProperty(
+              "border-color",
+              "rgba(100,50,180,0.5)",
+              "important",
+            );
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var darkBtn = document.getElementById("DARK_MODE");
+        var lightBtn = document.getElementById("LIGHT_MODE");
+        if (darkBtn)
+          darkBtn.addEventListener("click", function () {
+            applyBtnSideStyle(true);
+          });
+        if (lightBtn)
+          lightBtn.addEventListener("click", function () {
+            applyBtnSideStyle(false);
+          });
+      });
+
+      // CONTROLLER .on 감지 → 래퍼 위치 전환 (가운데 → 하단) + 버튼 텍스트 변경
+      (function () {
+        var btn = document.getElementById("CONTROLLER");
+        var wrap = document.getElementById("LIGHT_BTN_WRAP_CTRL");
+        if (!btn || !wrap) return;
+
+        var observer = new MutationObserver(function () {
+          if (btn.classList.contains("on")) {
+            wrap.classList.add("active");
+            btn.textContent = "✕ 카메라 종료";
+          } else {
+            wrap.classList.remove("active");
+            btn.textContent = "controller";
+          }
+        });
+        observer.observe(btn, { attributes: true, attributeFilter: ["class"] });
+      })();
+    </script>
+  </body>
+</html>
